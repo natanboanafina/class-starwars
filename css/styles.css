@@ -23,6 +23,9 @@
 
 body {
   height: fit-content;
+  cursor: url("../assets/cursor/DarthVadermega.cur"), default;
+
+
 }
 
 body h1 {
@@ -31,6 +34,31 @@ body h1 {
   font-style: italic;
   letter-spacing: 0.5rem;
 }
+
+
+div.card.border-primary:hover {
+  background-color: #f9f9f9;
+  background-color: #0f0f0f;
+
+}
+
+div.card.border-primary:hover p,
+div.card.border-primary:hover h2 {
+  color: #fff;
+}
+
+div.card.border-primary p.h3,
+div.card.border-primary h2 {
+  transition: all 350ms ease-in-out;
+  cursor: url("../assets/cursor/oth28.cur"), default;
+  text-transform: capitalize;
+}
+
+#characters, #vehicles {
+  cursor: url("../assets/cursor/oth28.cur"), default;
+
+}
+
 
 footer {
   background-color: #000;

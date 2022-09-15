@@ -39,89 +39,68 @@
 							>Home <span class="sr-only">(página atual)</span></a
 						>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Link</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a
-							class="nav-link dropdown-toggle"
-							href="#"
-							id="navbarDropdown"
-							role="button"
-							data-toggle="dropdown"
-							aria-haspopup="true"
-							aria-expanded="false"
-						>
-							Dropdown
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">Ação</a>
-							<a class="dropdown-item" href="#">Outra ação</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Algo mais aqui</a>
-						</div>
-					</li>
 				</ul>
-				<form class="form-inline my-2 my-lg-0">
-					<input
-						class="form-control mr-sm-2"
-						type="search"
-						placeholder="Pesquisar"
-						aria-label="Pesquisar"
-					/>
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-						Pesquisar
-					</button>
-				</form>
 			</div>
 		</nav>
 		<main class="container-fluid pb-5">
 			<div class="container d-flex center justify-content-center">
 				<h1 class="h1 pt-5 pb-5">Star Wars</h1>
 			</div>
-			<div
+			<!-- CARDS - INÍCIO -->
+
+			<!-- PERSONAGENS -->
+			<!-- <div
 				class="container d-flex center justify-content-around align-items-center"
-			>
-				<div class="card text-body" style="width: 20rem">
-					<div class="card-body">
-						<img
-							src="./assets/darth-vader.webp"
-							alt="Darth Vader"
-							class="card-img-top mb-1"
-						/>
-						<h4 class="card-title text-center">Personagens</h4>
-						<p class="card-text text-center">Busque por personagens</p>
-						<div class="container d-flex justify-content-center">
-							<input
-								id="characters"
-								type="button"
-								value="Characters"
-								placeholder="Personagens"
-								class="btn btn-dark"
-							/>
+			> -->
+			<div class="container justify-content-center">
+				<div
+					class="row align-items-center justify-content-md-center"
+					style="gap: 2rem"
+				>
+					<div class="col-md-auto align-self-center">
+						<div class="card text-body" style="width: 20rem">
+							<div class="card-body">
+								<img
+									src="./assets/darth-vader.webp"
+									alt="Darth Vader"
+									class="card-img-top mb-1"
+								/>
+								<h4 class="card-title text-center">Personagens</h4>
+								<p class="card-text text-center">Busque por personagens</p>
+								<div class="container d-flex justify-content-center">
+									<input
+										id="characters"
+										type="button"
+										value="Personagens"
+										class="btn btn-dark"
+									/>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="card text-body" style="width: 20rem">
-					<div class="card-body">
-						<img
-							style="height: 10.5rem"
-							src="./assets/falcon.jpg"
-							alt="Darth Vader"
-							class="card-img-top mb-1"
-						/>
-						<h4 class="card-title text-center">Naves</h4>
-						<p class="card-text text-center">
-							Busque por naves e outros veículos
-						</p>
-						<div class="container d-flex justify-content-center">
-							<input
-								id="vehicles"
-								type="button"
-								value="Vehicles"
-								placeholder="Veículos"
-								class="btn btn-dark"
-							/>
+					<!-- VEÍCULOS -->
+					<div class="col-md-auto align-self-center">
+						<div class="card text-body" style="width: 20rem">
+							<div class="card-body">
+								<img
+									style="height: 10.5rem"
+									src="./assets/falcon.jpg"
+									alt="Darth Vader"
+									class="card-img-top mb-1"
+								/>
+								<h4 class="card-title text-center">Naves</h4>
+								<p class="card-text text-center">
+									Busque por naves e outros veículos
+								</p>
+								<div class="container d-flex justify-content-center">
+									<input
+										id="vehicles"
+										type="button"
+										value="Veículos"
+										class="btn btn-dark"
+									/>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
