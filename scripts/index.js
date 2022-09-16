@@ -1,6 +1,7 @@
 const char = document.querySelector('#characters');
 const vehicle = document.querySelector('#vehicles');
 const results = document.querySelector('#results');
+// const resultsVehicle = document.querySelector('#results-vehicle');
 
 char.addEventListener('click', (e) => {
 	const value = e.target.value;
@@ -30,13 +31,17 @@ async function fetchData(name) {
 		headers: { 'Content-Type': 'application/json' },
 	});
 	console.table('Fetch Data: ', data.results);
-	renderChar(data);
-	renderVeh(data);
+
+	if (name === 'people') {
+		renderChar(data);
+	} else {
+		renderVeh(data);
+	}
 }
 
-//Continuar daqui
 function renderChar(data) {
 	let newResults = '';
+
 	data.results.map((person) => {
 		return (newResults += `
 		<div class="container grid" >
@@ -64,9 +69,9 @@ function renderChar(data) {
 }
 
 function renderVeh(data) {
-	let newResults = '';
+	let renderedResults = '';
 	data.results.map((vehicle) => {
-		return (newResults += `
+		return (renderedResults += `
 		<div class="container grid" >
 		<div class="row align-items-center justify-content-md-center">
 		<div class="col-sm">
@@ -91,5 +96,5 @@ function renderVeh(data) {
 		`);
 	});
 
-	results.innerHTML = newResults;
+	results.innerHTML = renderedResults;
 }
