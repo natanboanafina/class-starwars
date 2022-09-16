@@ -19,14 +19,13 @@
   box-sizing: border-box;
 }
 
-
-
 body {
+
   height: fit-content;
   cursor: url("../assets/cursor/DarthVadermega.cur"), default;
-
-
 }
+
+
 
 body h1 {
   font-family: 'StarJhol' !important;
@@ -57,6 +56,19 @@ div.card.border-primary h2 {
 #characters, #vehicles {
   cursor: url("../assets/cursor/oth28.cur"), default;
 
+}
+
+
+#spinner .z-index {
+  position: absolute !important;
+  width: 4rem;
+  height: 4rem;
+  top: 70%;
+  z-index: 9999;
+}
+
+.remove-spinner {
+  display: none !important;
 }
 
 

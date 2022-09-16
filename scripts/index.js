@@ -1,6 +1,7 @@
 const char = document.querySelector('#characters');
 const vehicle = document.querySelector('#vehicles');
 const results = document.querySelector('#results');
+const spinner = document.querySelector('#spinner');
 // const resultsVehicle = document.querySelector('#results-vehicle');
 
 char.addEventListener('click', (e) => {
@@ -8,18 +9,22 @@ char.addEventListener('click', (e) => {
 
 	if (value === 'Personagens') {
 		try {
+			spinner.classList.remove('remove-spinner');
 			fetchData('people');
+			spinner.classList.add('remove-spinner');
 		} catch (err) {
 			throw new Error(err);
 		}
 	}
 });
+
 vehicle.addEventListener('click', (e) => {
 	const value = e.target.value;
-
 	if (value === 'Veículos') {
 		try {
+			spinner.classList.remove('remove-spinner');
 			fetchData('vehicles');
+			spinner.classList.add('remove-spinner');
 		} catch (err) {
 			throw new Error(err);
 		}
@@ -30,7 +35,6 @@ async function fetchData(name) {
 	const { data } = await axios.get(`https://swapi.dev/api/${name}`, {
 		headers: { 'Content-Type': 'application/json' },
 	});
-	console.table('Fetch Data: ', data.results);
 
 	if (name === 'people') {
 		renderChar(data);
